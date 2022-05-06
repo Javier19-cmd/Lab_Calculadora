@@ -5,6 +5,7 @@
 // Se instaló el dom: npm install --save-dev @testing-library/jest-dom
 // Se instaló el user event: npm install --save-dev @testing-library/user-event @testing-library/dom
 // Se instaló el transform runtime: npm install @babel/plugin-transform-runtime
+// Para correr el ambiente, se escribe: npm run dev
 
 import { useState } from 'react'
 import logo from './logo.svg'
