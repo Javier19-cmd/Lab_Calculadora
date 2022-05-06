@@ -1,3 +1,11 @@
+// Se instaló Babel: npm install @babel/preset-env
+// Se instaló React: npm install @babel/preset-react
+// Se instaló testing-library: npm install --save-dev @testing-library/react
+// Se instaló el ambiente de jest: npm install --dev jest-environment-jsdom
+// Se instaló el dom: npm install --save-dev @testing-library/jest-dom
+// Se instaló el user event: npm install --save-dev @testing-library/user-event @testing-library/dom
+// Se instaló el transform runtime: npm install @babel/plugin-transform-runtime
+
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
