@@ -7,6 +7,7 @@
 // Se instaló el transform runtime: npm install @babel/plugin-transform-runtime
 // Se instaló jest: npm install -g jest
 // Para correr el ambiente, se escribe: npm run dev
+// Para que las instancias funcionen, se tienen que hacer acá.
 
 import React from 'react'
 import { useState } from 'react'
