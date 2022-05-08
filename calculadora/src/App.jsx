@@ -10,47 +10,65 @@
 // Para que las instancias funcionen, se tienen que hacer acá.
 
 import React from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
 
+  const [resultado, setResultado] = useState("") // Estado de los botones de la calculadora.
+
+  // Eventlistener de los botones.
+  const handleClick = (e) => {
+    setResultado(resultado.concat(e.target.name)) 
+  }
+
+  // Método para borrar la pantalla.
+  const clear = () => {
+    setResultado("")
+  }
+
   return (
     <div className="App">
+    
+      <div className="container">
+        {/*Div para el display de la calculadora*/}
+        <form>
+          <input type="text" value={resultado} />
+        </form>
+
+      </div>
       {/*Div para la calculadora*/}
       <div className="Calculadora">
         {/*Botón para el cero*/}
-        <button className="Cero">0</button>
+        <button name="0" className="Cero" onClick={handleClick}>0</button>
         {/*Botón para el uno*/}
-        <button className="Uno">1</button>
+        <button name="1" className="Uno" onClick={handleClick}>1</button>
         {/*Botón para el dos*/}
-        <button className="Dos">2</button>
+        <button name="2" className="Dos" onClick={handleClick}>2</button>
         {/*Botón para el tres*/}
-        <button className="Tres">3</button>
+        <button name="3" className="Tres" onClick={handleClick}>3</button>
         {/*Botón para el cuatro*/}
-        <button className="Cuatro">4</button>
+        <button name="4" className="Cuatro" onClick={handleClick}>4</button>
         {/*Botón para el seis*/}
-        <button className="Cinco">5</button>
+        <button name="5" className="Cinco" onClick={handleClick}>5</button>
         {/*Botón para el siete*/}
-        <button className="Seis">6</button>
+        <button name="6" className="Seis" onClick={handleClick}>6</button>
         {/*Botón para el siete*/}
-        <button className="Siete">7</button>
+        <button name="7" className="Siete" onClick={handleClick}>7</button>
         {/*Botón para el ocho*/}
-        <button className="Ocho">8</button>
+        <button name="8" className="Ocho" onClick={handleClick}>8</button>
         {/*Botón para el nueve*/}
-        <button className="Nueve">9</button>
+        <button name="9" className="Nueve" onClick={handleClick}>9</button>
         {/*Botón para el más*/}
-        <button className="Mas">+</button>
+        <button name="+" className="Mas" onClick={handleClick}>+</button>
         {/*Botón para el menos*/}
-        <button className="Menos">-</button>
+        <button name="-" className="Menos" onClick={handleClick}>-</button>
         {/*Botón para la multiplicación*/}
-        <button className="Multiplicacion">x</button>
+        <button name="x" className="Multiplicacion" onClick={handleClick}>x</button>
         {/*Botón para la igualdad*/}
-        <button className="Igual">=</button>
+        <button className="Igual" onClick={handleClick}>=</button>
         {/*Botón para borrar*/}
-        <button className="Borrar">C</button>
-        {/*Pantalla de la calculadora*/}
-        <div className="Display"></div>
+        <button className="Borrar" onClick={clear} id="borrar" >C</button>
       </div>
     </div>
   )
