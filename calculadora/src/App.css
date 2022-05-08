@@ -155,11 +155,20 @@ body{
   left: 750px;
 }*/
 
-input[type="text"] {
+
+.container {
   position: relative;
-  background: wheat;
-  width: 294px;
+  background-color: wheat;
+  width: 300px;
   height: 100px;
   top: 400px;
-  left: -40px;
+  left: 750px;
+}
+
+.container .prev{
+  color: red;
+}
+
+.container .current {
+  color: blue;
 }
