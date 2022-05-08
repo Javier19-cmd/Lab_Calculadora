@@ -1,6 +1,6 @@
 body{
   background: rgb(24,29,9);
-  display: flex;
+  display: grid;
 }
 .App {
   text-align: center;
