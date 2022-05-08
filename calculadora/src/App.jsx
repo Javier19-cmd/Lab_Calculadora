@@ -11,6 +11,7 @@
 
 // Referencias: 
 // 1. https://www.youtube.com/watch?v=hpfDRnijdPE&ab_channel=DigitalSolutionsMaster
+// Segundo tutorial de la calculadora.
 // 2. https://www.youtube.com/watch?v=CMwt6Nwjf9g&ab_channel=BetoMoedano
 // 3. https://www.youtube.com/watch?v=56fX1h_b1H0&ab_channel=BetoMoedano
 
