@@ -14,21 +14,32 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-      </header>
+      {/*Div para la calculadora*/}
+      <div className="Calculadora">
+        {/*Div para el cero*/}
+        <button className="Cero">0</button>
+        {/*Div para el uno*/}
+        <button className="Uno">1</button>
+        {/*Div para el dos*/}
+        <button className="Dos">2</button>
+        {/*Div para el tres*/}
+        <button className="Tres">3</button>
+        {/*Div para el cuatro*/}
+        <button className="Cuatro">4</button>
+        {/*Div para el seis*/}
+        <button className="Cinco">5</button>
+        {/*Div para el siete*/}
+        <button className="Seis">6</button>
+        {/*Div para el siete*/}
+        <button className="Siete">7</button>
+        {/*Div para el ocho*/}
+        <button className="Ocho">8</button>
+        {/*Div para el nueve*/}
+        <button className="Nueve">9</button>
+      </div>
     </div>
   )
 }
