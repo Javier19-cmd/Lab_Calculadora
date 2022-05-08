@@ -11,10 +11,145 @@ body{
   position: absolute;
 }
 
+/*Propiedades del botón cero*/
 .Cero{
   position: relative;
+  width: 300px;
+  height: 50px;
+  left: 750px;
+  top: 600px;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+/*Propiedades del botón uno*/
+.Uno{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: 450px;
+  top: 550px;
+
+}
+
+/*Propiedades del botón dos*/
+.Dos{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: 450px;
+  top: 550px;
+}
+
+/*Propiedades del botón tres*/
+.Tres{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: 450px;
+  top: 550px;
+}
+
+/*Propiedades del botón para el más*/
+.Mas{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  top: 550px;
+}
+
+/*Propiedades del botón cuatro*/
+.Cuatro{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: 225px;
+  top: 500px;
+}
+
+/*Propiedades del botón cinco*/
+.Cinco{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: 225px;
+  top: 500px;
+}
+
+/*Propiedades del botón seis*/
+.Seis{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: 225px;
+  top: 500px;
+}
+
+/*Propiedades del botón menos*/
+.Menos{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  top: 500px;
+  left: -75px;
+}
+
+/*Propiedades del botón siete*/
+.Siete{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  top: 450px;
+}
+
+/*Propiedades del botón ocho*/
+.Ocho{
+  position: relative;
+  left: 0px;
+  width: 75px;
+  height: 50px;
+  top: 450px;
+}
+
+/*Propiedades del botón nueve*/
+.Nueve{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  top: 450px;
+}
+
+/* Propiedades para el botón de multiplicación */
+.Multiplicacion{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  left: -150px;
+  top: 450px;
+}
+
+/*Propiedades del botón igual*/
+.Igual{
+  position: relative;
+  width: 150px;
+  height: 50px;
+  left: -450px;
+  top: 400px;
+}
+
+/*Propiedades del botón borrar*/
+.Borrar{
+  position: relative;
+  width: 150px;
+  height: 50px;
+  left: -450px;
+  top: 400px;
+}
+
+/*Propiedades de la pantalla de la calculadora*/
+.Display{
+  position: relative;
+  background: wheat;
+  width: 300px;
+  height: 100px;
+  top: 250px;
+  left: 750px;
 }

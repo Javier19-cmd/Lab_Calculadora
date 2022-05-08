@@ -19,26 +19,38 @@ function App() {
     <div className="App">
       {/*Div para la calculadora*/}
       <div className="Calculadora">
-        {/*Div para el cero*/}
+        {/*Botón para el cero*/}
         <button className="Cero">0</button>
-        {/*Div para el uno*/}
+        {/*Botón para el uno*/}
         <button className="Uno">1</button>
-        {/*Div para el dos*/}
+        {/*Botón para el dos*/}
         <button className="Dos">2</button>
-        {/*Div para el tres*/}
+        {/*Botón para el tres*/}
         <button className="Tres">3</button>
-        {/*Div para el cuatro*/}
+        {/*Botón para el cuatro*/}
         <button className="Cuatro">4</button>
-        {/*Div para el seis*/}
+        {/*Botón para el seis*/}
         <button className="Cinco">5</button>
-        {/*Div para el siete*/}
+        {/*Botón para el siete*/}
         <button className="Seis">6</button>
-        {/*Div para el siete*/}
+        {/*Botón para el siete*/}
         <button className="Siete">7</button>
-        {/*Div para el ocho*/}
+        {/*Botón para el ocho*/}
         <button className="Ocho">8</button>
-        {/*Div para el nueve*/}
+        {/*Botón para el nueve*/}
         <button className="Nueve">9</button>
+        {/*Botón para el más*/}
+        <button className="Mas">+</button>
+        {/*Botón para el menos*/}
+        <button className="Menos">-</button>
+        {/*Botón para la multiplicación*/}
+        <button className="Multiplicacion">x</button>
+        {/*Botón para la igualdad*/}
+        <button className="Igual">=</button>
+        {/*Botón para borrar*/}
+        <button className="Borrar">C</button>
+        {/*Pantalla de la calculadora*/}
+        <div className="Display"></div>
       </div>
     </div>
   )
