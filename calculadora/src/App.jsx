@@ -6,6 +6,8 @@
 // Se instaló el user event: npm install --save-dev @testing-library/user-event @testing-library/dom
 // Se instaló el transform runtime: npm install @babel/plugin-transform-runtime
 // Se instaló jest: npm install -g jest
+// Se instaló el plugin de react para eslint: npm i --save-dev eslint-plugin-react
+// Se puso en el extends de .eslintrc.js esto: 'plugin:react/recommended'
 // Para correr el ambiente, se escribe: npm run dev
 // Para que las instancias funcionen, se tienen que hacer acá.
 
