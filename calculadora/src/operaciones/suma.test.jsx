@@ -8,5 +8,5 @@ it('returs its addition', () => {
 })
 
 it('returs error', () => {
-  expect(suma(20000000000, 555555555555555)).toBe("ERROR")
+  expect(suma(20000000000, 555555555555555)).toBe('ERROR')
 })
