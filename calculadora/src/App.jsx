@@ -31,6 +31,7 @@ function App() {
   // Asignando el número en la pantalla de la calculadora.
   const numero = (e) => {
     if(operacion === ""){
+      // Si no se ha seleccionado una operación, entonces se settea el primer número.
       setOp1(op1 + e) // Setteando el primer número en la pantalla.
     }else {
       // Esto pasa si ya se seleccionó un operando.
@@ -51,7 +52,7 @@ function App() {
      setResultdado("")
    }
 
-   //Función que lee las operaciones presionadas
+   //Función que lee las operaciones presionadas.
    const results = () => {
      switch (operacion){
        case "+": // Este manda a llamar a la suma desde el arhivo suma, que se encuentra en la carpeta de operaciones.
@@ -69,48 +70,47 @@ function App() {
   return (
     <div className="App">
 
-      {/*Div para el display de la calculadora*/}
+      {/* Div para el display de la calculadora */}
       {/* */}
       <div className="Pantalla">
-      {/*Div para la calculadora*/}
-      
-        {/*Imprime el primer número con el operando*/}
-        <div className="prev">{operacion ? op1 : ""}</div>
-        {/*Imprime el resultado o la operación*/}
+        {/* Imprime el resultado o la operación */}
+        {/* Si hay un resultado, entonces se enseña el resultado, si no hay resultado se analiza primero si 
+        ya se presionó un número y una operación para poder imprimir el segundo número */}
         <div className="current">{resultado ? resultado : (!operacion ? op1 : op2)}</div>
         
       </div>
 
       <div className="Calculadora">
-        {/*Botón para el cero*/}
+        {/* Div para los botones de la calculadora */}
+        {/* Botón para el cero */}
         <button className="Cero" onClick={() => {numero(0)}}>0</button>
-        {/*Botón para el uno*/}
+        {/* Botón para el uno */}
         <button className="Uno" onClick={() => {numero(1)}}>1</button>
-        {/*Botón para el dos*/}
+        {/* Botón para el dos */}
         <button className="Dos" onClick={() => {numero(2)}}>2</button>
-        {/*Botón para el tres*/}
+        {/* Botón para el tres */}
         <button className="Tres" onClick={() => {numero(3)}}>3</button>
-        {/*Botón para el cuatro*/}
+        {/* Botón para el cuatro */}
         <button className="Cuatro" onClick={() => {numero(4)}}>4</button>
-        {/*Botón para el seis*/}
+        {/* Botón para el seis */}
         <button className="Cinco" onClick={() => {numero(5)}}>5</button>
-        {/*Botón para el siete*/}
+        {/* Botón para el siete */}
         <button className="Seis" onClick={() => {numero(6)}}>6</button>
-        {/*Botón para el siete*/}
+        {/* Botón para el siete */}
         <button className="Siete" onClick={() => {numero(7)}}>7</button>
-        {/*Botón para el ocho*/}
+        {/* Botón para el ocho */}
         <button className="Ocho" onClick={() => {numero(8)}}>8</button>
-        {/*Botón para el nueve*/}
+        {/* Botón para el nueve */}
         <button className="Nueve" onClick={() => {numero(9)}}>9</button>
-        {/*Botón para el más*/}
+        {/* Botón para el más */}
         <button className="Mas" onClick={() => {opera("+")}}>+</button>
-        {/*Botón para el menos*/}
+        {/* Botón para el menos */}
         <button className="Menos" onClick={() => {opera("-")}}>-</button>
-        {/*Botón para la multiplicación*/}
+        {/* Botón para la multiplicación */}
         <button className="Multiplicacion" onClick={() => {opera("*")}}>x</button>
-        {/*Botón para la igualdad*/}
+        {/* Botón para la igualdad */}
         <button className="Igual" onClick={results}>=</button>
-        {/*Botón para borrar*/}
+        {/* Botón para borrar */}
         <button className="Borrar" onClick={borrar}>C</button>
       </div>
     </div>
