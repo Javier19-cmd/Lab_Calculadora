@@ -12,6 +12,6 @@ it('returs its substraction', () => {
 // los números se restan y se imprime un mensaje de fracaso
 // indicando que la resta salió mal.
 
-it('returs its substraction', () => {
-  expect(resta(10, 15)).toBe(-5)
+it('returs error', () => {
+  expect(resta(10, 15)).toBe("Error")
 })
