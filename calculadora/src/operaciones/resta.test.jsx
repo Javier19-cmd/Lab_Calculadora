@@ -13,5 +13,5 @@ it('returs its substraction', () => {
 // indicando que la resta salió mal.
 
 it('returs error', () => {
-  expect(resta(10, 15)).toBe('Error')
+  expect(resta(10, 15)).toBe('ERROR')
 })

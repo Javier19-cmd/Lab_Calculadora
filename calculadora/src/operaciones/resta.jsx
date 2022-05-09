@@ -10,7 +10,7 @@ const resta = (a, b) => {
   // Si la operación es mayor a cero, entonces se dice que todo pasó.
   if (res < 0) {
     // Error, resta menor a cero.
-    return 'Error'
+    return 'ERROR'
   }
 
   return res
