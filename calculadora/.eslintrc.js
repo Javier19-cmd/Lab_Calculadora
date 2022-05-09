@@ -3,17 +3,32 @@ module.exports = {
         "browser": true,
         "commonjs": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        'plugin:react/recommended'
     ],
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
     },
     "rules": {
         "semi": 0,
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": "off"
-    }
+        "react/jsx-filename-extension": "off",
+    },
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [
+              ".js",
+              ".jsx"
+            ]
+          }
+        }
+      }
 }
