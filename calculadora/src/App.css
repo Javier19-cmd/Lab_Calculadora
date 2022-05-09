@@ -1,6 +1,5 @@
 body{
   background: rgb(24,29,9);
-  display: grid;
 }
 .App {
   text-align: center;
@@ -9,6 +8,7 @@ body{
 /*Propiedades del padre de los botones (calculadora)*/
 .Calculadora{
   position: absolute;
+  display: flex;
 }
 
 /*Propiedades del botón cero*/
@@ -156,7 +156,7 @@ body{
 }*/
 
 
-.container {
+.Pantalla {
   position: relative;
   background-color: wheat;
   width: 300px;

@@ -10,10 +10,9 @@
 // Para que las instancias funcionen, se tienen que hacer acá.
 
 // Referencias: 
-// 1. https://www.youtube.com/watch?v=hpfDRnijdPE&ab_channel=DigitalSolutionsMaster
-// Segundo tutorial de la calculadora.
-// 2. https://www.youtube.com/watch?v=CMwt6Nwjf9g&ab_channel=BetoMoedano
-// 3. https://www.youtube.com/watch?v=56fX1h_b1H0&ab_channel=BetoMoedano
+// Tutorial de como hacer una calculadroa
+// 1. https://www.youtube.com/watch?v=CMwt6Nwjf9g&ab_channel=BetoMoedano
+// 2. https://www.youtube.com/watch?v=56fX1h_b1H0&ab_channel=BetoMoedano
 
 import React from 'react'
 import { useState } from 'react'
@@ -29,81 +28,80 @@ function App() {
   const [operacion, setOperacion] = useState("") // Estado que guarda las operaciones. 
   const [resultado, setResultdado] = useState(0) // Estado que guarda los resultados.
 
-  // Eventlistener de los botones. Este escucha nada más a los botones de los números.
-  const handleClick = (e) => {
-
-    // Si la operación está vacía, entonces se asigna el primer número al primer estado.
+  // Asignando el número en la pantalla de la calculadora.
+  const numero = (e) => {
     if(operacion === ""){
-      setOp1(op1 + e) // Settea el primer número de la calculadora.
-    }else{
-      // Si ya se seleccionó la operación, entonces se asigna el valor del segundo número al segundo estado.
-      setOp2(op2 + e) // Settea el segundo número de la calculadora.
+      setOp1(op1 + e) // Setteando el primer número en la pantalla.
+    }else {
+      // Esto pasa si ya se seleccionó un operando.
+      setOp2(op2 + e) // Setteando el segundo número en la pantalla.
     }
   }
 
-  // Eventlistener de los botones. Este escucha a los botones de las operaciones.
-  const opera = (e) => {
-    setOperacion(e)
-  }
+  // Esta función guarda la operación que el usuario presionó.
+   const opera = (e) => {
+     setOperacion(e) // Se guarda el operando que se presionó.
+   }
 
-  // Método para borrar la pantalla.
-  const clear = () => {
-    setOp1("")
-    setOp2("")
-    setOperacion("")
-    setResultdado("")
-  }
+   //Método que limpia la pantalla de la calculadora.
+   const borrar = () => {
+     setOp1("")
+     setOp2("")
+     setOperacion("")
+     setResultdado("")
+   }
 
-  // Eventlistener de los resultados. Este escucha al igual de la calculadora.
-  const resultads = () => {
-    switch (operacion){
-      case "+":
-        setResultdado(suma(Number(op1), Number(op2)))
-        break;
-      case "-":
-        const b = resta(Number(op1), Number(op2))
-        setResultdado(b)
-        break;
-      case "-":
-        const c = multiplicacion(Number(op1), Number(op2))
-        setResultdado(c)
-        break;
-    }
-  }
+   //Función que lee las operaciones presionadas
+   const results = () => {
+     switch (operacion){
+       case "+": // Este manda a llamar a la suma desde el arhivo suma, que se encuentra en la carpeta de operaciones.
+         setResultdado(suma(Number(op1), Number(op2)))
+         break
+      case "-": // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
+        setResultdado(resta(Number(op1), Number(op2)))
+        break
+      case "*":// Este manda a llamar a la operación multiplicación, que se encuentra en la carpeta de operaciones.
+        setResultdado(multiplicacion(Number(op1), Number(op2)))
+        break
+     }
+   }
 
   return (
     <div className="App">
 
       {/*Div para el display de la calculadora*/}
       {/* */}
-      <div className="container">
+      <div className="Pantalla">
+      {/*Div para la calculadora*/}
+      
         {/*Imprime el primer número con el operando*/}
         <div className="prev">{operacion ? op1 : ""}</div>
         {/*Imprime el resultado o la operación*/}
-        <div className="current">{resultado ? (!operacion ? op1 : op2) : resultado}</div>
+        <div className="current">{resultado ? resultado : (!operacion ? op1 : op2)}</div>
+        
       </div>
-      {/*Div para la calculadora*/}
+
       <div className="Calculadora">
         {/*Botón para el cero*/}
-        <button className="Cero" onClick={() => {handleClick(0)}}>0</button>
+        <button className="Cero" onClick={() => {numero(0)}}>0</button>
         {/*Botón para el uno*/}
-        <button className="Uno" onClick={() => {handleClick(1)}}>1</button>
+        <button className="Uno" onClick={() => {numero(1)}}>1</button>
         {/*Botón para el dos*/}
-        <button className="Dos" onClick={() => {handleClick(2)}}>2</button>
+        <button className="Dos" onClick={() => {numero(2)}}>2</button>
         {/*Botón para el tres*/}
-        <button className="Tres" onClick={() => {handleClick(3)}}>3</button>
+        <button className="Tres" onClick={() => {numero(3)}}>3</button>
         {/*Botón para el cuatro*/}
-        <button className="Cuatro" onClick={() => {handleClick(4)}}>4</button>
+        <button className="Cuatro" onClick={() => {numero(4)}}>4</button>
         {/*Botón para el seis*/}
-        <button className="Cinco" onClick={() => {handleClick(5)}}>5</button>
+        <button className="Cinco" onClick={() => {numero(5)}}>5</button>
         {/*Botón para el siete*/}
-        <button className="Seis" onClick={() => {handleClick(6)}}>6</button>
+        <button className="Seis" onClick={() => {numero(6)}}>6</button>
         {/*Botón para el siete*/}
-        <button className="Siete" onClick={() => {handleClick(7)}}>7</button>
+        <button className="Siete" onClick={() => {numero(7)}}>7</button>
         {/*Botón para el ocho*/}
-        <button className="Ocho" onClick={() => {handleClick(8)}}>8</button>
+        <button className="Ocho" onClick={() => {numero(8)}}>8</button>
         {/*Botón para el nueve*/}
-        <button className="Nueve" onClick={() => {handleClick(9)}}>9</button>
+        <button className="Nueve" onClick={() => {numero(9)}}>9</button>
         {/*Botón para el más*/}
         <button className="Mas" onClick={() => {opera("+")}}>+</button>
         {/*Botón para el menos*/}
@@ -111,9 +109,9 @@ function App() {
         {/*Botón para la multiplicación*/}
         <button className="Multiplicacion" onClick={() => {opera("*")}}>x</button>
         {/*Botón para la igualdad*/}
-        <button className="Igual" onClick={resultads}>=</button>
+        <button className="Igual" onClick={results}>=</button>
         {/*Botón para borrar*/}
-        <button className="Borrar" onClick={clear} id="borrar" >C</button>
+        <button className="Borrar" onClick={borrar}>C</button>
       </div>
     </div>
   )
