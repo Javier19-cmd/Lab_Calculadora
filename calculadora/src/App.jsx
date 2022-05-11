@@ -27,6 +27,7 @@ import multiplicacion from './operaciones/multiplicacion'
 function App() {
   const [op1, setOp1] = useState('') // Estado de los botones de la calculadora. Guarda el primer valor.
   const [op2, setOp2] = useState('') // Estado de los botones de la calculadora. Guarda el segundo valor.
+  const [op3, setOp3] = useState('')
   const [operacion, setOperacion] = useState('') // Estado que guarda las operaciones.
   const [newOperacion, setNewOperacion] = useState('')
   const [resultado, setResultdado] = useState(0) // Estado que guarda los resultados.
@@ -44,8 +45,14 @@ function App() {
 
   // Esta función guarda la operación que el usuario presionó.
   const opera = (e) => {
-    setOperacion(e) // Se guarda el operando que se presionó.
-    setNewOperacion(operacion)
+
+    if(operacion === ''){
+      setOperacion(e) // Se guarda el operando que se presionó.
+      // Si en caso no se seleccionó una operación, entonces se pone la operación en el estado.
+    }else {
+      // Si en caso ya hay una operación se settea en otro estado la operación actual.
+      setNewOperacion(e) 
+    }
   }
 
   // Método que limpia la pantalla de la calculadora.
@@ -62,14 +69,12 @@ function App() {
       // Este manda a llamar a la suma desde el arhivo suma,
       // que se encuentra en la carpeta de operaciones.
       setResultdado(suma(Number(op1), Number(op2)))
-      setOp1('')
-      setOp2('')
     } else if (operacion === '-') {
       // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
       setResultdado(resta(Number(op1), Number(op2)))
       // Se limpian los dos números metidos originalmente.
       setOp1('')
-      setOp2('') 
+      setOp2('')
     } else if (operacion === '*') {
       // Este manda a llamar a la operación multiplicación,
       // que se encuentra en la carpeta de operaciones.
