@@ -16,6 +16,7 @@
 // 1. https://www.youtube.com/watch?v=CMwt6Nwjf9g&ab_channel=BetoMoedano
 // 2. https://www.youtube.com/watch?v=56fX1h_b1H0&ab_channel=BetoMoedano
 // 3. Arreglando los imports: https://lifesaver.codes/answer/import-extensions-missing-file-extension-after-upgrade-to-v2-19-1-1573
+// Eliminar resultado y settear op1 para el resultado y op2 limpiarlo para el nuevo resultado.
 
 import { useState } from 'react'
 import './App.css'
@@ -27,6 +28,7 @@ function App() {
   const [op1, setOp1] = useState('') // Estado de los botones de la calculadora. Guarda el primer valor.
   const [op2, setOp2] = useState('') // Estado de los botones de la calculadora. Guarda el segundo valor.
   const [operacion, setOperacion] = useState('') // Estado que guarda las operaciones.
+  const [newOperacion, setNewOperacion] = useState('')
   const [resultado, setResultdado] = useState(0) // Estado que guarda los resultados.
 
   // Asignando el número en la pantalla de la calculadora.
@@ -34,7 +36,7 @@ function App() {
     if (operacion === '') {
       // Si no se ha seleccionado una operación, entonces se settea el primer número.
       setOp1(op1 + e) // Setteando el primer número en la pantalla.
-    } else {
+    }else {
       // Esto pasa si ya se seleccionó un operando.
       setOp2(op2 + e) // Setteando el segundo número en la pantalla.
     }
@@ -43,6 +45,7 @@ function App() {
   // Esta función guarda la operación que el usuario presionó.
   const opera = (e) => {
     setOperacion(e) // Se guarda el operando que se presionó.
+    setNewOperacion(operacion)
   }
 
   // Método que limpia la pantalla de la calculadora.
@@ -59,13 +62,20 @@ function App() {
       // Este manda a llamar a la suma desde el arhivo suma,
       // que se encuentra en la carpeta de operaciones.
       setResultdado(suma(Number(op1), Number(op2)))
+      setOp1('')
+      setOp2('')
     } else if (operacion === '-') {
       // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
       setResultdado(resta(Number(op1), Number(op2)))
+      // Se limpian los dos números metidos originalmente.
+      setOp1('')
+      setOp2('') 
     } else if (operacion === '*') {
       // Este manda a llamar a la operación multiplicación,
       // que se encuentra en la carpeta de operaciones.
       setResultdado(multiplicacion(Number(op1), Number(op2)))
+      setOp1('')
+      setOp2('')
     }
   }
 
