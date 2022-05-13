@@ -85,6 +85,7 @@ function App() {
         console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
+        setNewOperacion('')
       } else if (newOperacion === '*') {
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
         // setOperacion('')
@@ -94,6 +95,7 @@ function App() {
         console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
+        setNewOperacion('')
       } else if (newOperacion === '-') {
         setResultdado(resta(Number(resultado), Number(op3)))
         // setOperacion('')
@@ -103,6 +105,7 @@ function App() {
         console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
+        setNewOperacion('')
       }
     } else if (operacion === '-') { // Apartado de la resta.
       // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
@@ -122,6 +125,7 @@ function App() {
         console.log(resultado)
         setOp1('')
         setOp3('')
+        //setNewOperacion('')
       } else if (newOperacion === '*') {
         setOperacion('')
         setOp1(resultado)
@@ -131,6 +135,7 @@ function App() {
         console.log(resultado)
         setOp1('')
         setOp3('')
+        //setNewOperacion('')
       }else if (newOperacion === '-') {
         setOperacion('')
         setOp1(resultado)
@@ -140,6 +145,7 @@ function App() {
         console.log(resultado)
         setOp1('')
         setOp3('')
+        //setNewOperacion('')
       }
     } else if (operacion === '*') {// Apartado de la multiplicación.
       // Este manda a llamar a la operación multiplicación,
@@ -158,6 +164,7 @@ function App() {
         setResultdado(suma(Number(resultado), Number(op3)))
         setOp1('')
         setOp3('')
+        //setNewOperacion('')
       } else if (newOperacion === '*') {
         setOperacion('')
         setOp1(resultado)
@@ -174,6 +181,7 @@ function App() {
         setResultdado(resta(Number(resultado), Number(op3)))
         setOp1('')
         setOp3('')
+       // setNewOperacion('')
       }
     }
   }
