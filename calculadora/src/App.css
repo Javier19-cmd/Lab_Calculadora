@@ -18,6 +18,7 @@ body{
   height: 50px;
   left: 750px;
   top: 600px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón uno*/
@@ -27,7 +28,7 @@ body{
   height: 50px;
   left: 450px;
   top: 550px;
-
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón dos*/
@@ -37,6 +38,7 @@ body{
   height: 50px;
   left: 450px;
   top: 550px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón tres*/
@@ -46,6 +48,7 @@ body{
   height: 50px;
   left: 450px;
   top: 550px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón para el más*/
@@ -54,6 +57,7 @@ body{
   width: 75px;
   height: 50px;
   top: 550px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón cuatro*/
@@ -63,6 +67,7 @@ body{
   height: 50px;
   left: 225px;
   top: 500px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón cinco*/
@@ -72,6 +77,7 @@ body{
   height: 50px;
   left: 225px;
   top: 500px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón seis*/
@@ -81,6 +87,7 @@ body{
   height: 50px;
   left: 225px;
   top: 500px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón menos*/
@@ -90,6 +97,7 @@ body{
   height: 50px;
   top: 500px;
   left: -75px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón siete*/
@@ -98,6 +106,7 @@ body{
   width: 75px;
   height: 50px;
   top: 450px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón ocho*/
@@ -107,6 +116,7 @@ body{
   width: 75px;
   height: 50px;
   top: 450px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón nueve*/
@@ -116,6 +126,7 @@ body{
   height: 50px;
   left: 0px;
   top: 450px;
+  background: #4DA8D5;
 }
 
 /* Propiedades para el botón de multiplicación */
@@ -125,6 +136,7 @@ body{
   height: 50px;
   left: -150px;
   top: 450px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón igual*/
@@ -134,6 +146,7 @@ body{
   height: 50px;
   left: -450px;
   top: 400px;
+  background: #4DA8D5;
 }
 
 /*Propiedades del botón borrar*/
@@ -143,6 +156,7 @@ body{
   height: 50px;
   left: -450px;
   top: 400px;
+  background: #4DA8D5;
 }
 
 /*Propiedades de la pantalla de la calculadora*/
