@@ -66,7 +66,7 @@ function App() {
 
   // Función que lee las operaciones presionadas.
   const results = () => {
-    if (operacion === '+') {
+    if (operacion === '+') { // Apartado de la suma.
       // Este manda a llamar a la suma desde el arhivo suma,
       // que se encuentra en la carpeta de operaciones.
       setResultdado(suma(Number(op1), Number(op2)))
@@ -83,6 +83,8 @@ function App() {
         console.log('El anterior resultado es: ', resultado)
         console.log('Nuevo operador 1', resultado)
         console.log('Nuevo operador 2', op3)
+        setOp1('')
+        setOp3('')
       } else if (newOperacion === '*') {
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
         // setOperacion('')
@@ -90,15 +92,19 @@ function App() {
         console.log('El nuevo resultado es: ', resultado)
         console.log('Nuevo operador 1', op1)
         console.log('Nuevo operador 2', op3)
+        setOp1('')
+        setOp3('')
       } else if (newOperacion === '-') {
-        setResultdado(resta(Number(op3), Number(resultado)))
+        setResultdado(resta(Number(resultado), Number(op3)))
         // setOperacion('')
         setOp1(resultado)
         console.log('El nuevo resultado es: ', resultado)
         console.log('Nuevo operador 1', op1)
         console.log('Nuevo operador 2', op3)
+        setOp1('')
+        setOp3('')
       }
-    } else if (operacion === '-') {
+    } else if (operacion === '-') { // Apartado de la resta.
       // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
       setResultdado(resta(Number(op1), Number(op2)))
       // Se limpian los dos números metidos originalmente.
@@ -114,6 +120,8 @@ function App() {
         console.log('Op3', op3)
         setResultdado(suma(Number(resultado), Number(op3)))
         console.log(resultado)
+        setOp1('')
+        setOp3('')
       } else if (newOperacion === '*') {
         setOperacion('')
         setOp1(resultado)
@@ -121,14 +129,19 @@ function App() {
         console.log('Nuevo operador 2', op3)
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
         console.log(resultado)
+        setOp1('')
+        setOp3('')
+      }else if (newOperacion === '-') {
         setOperacion('')
         setOp1(resultado)
-        console.log('Nuevo operador1', op1)
-        console.log('Op3', op3)
-        setResultdado(resta(Number(op3), Number(resultado)))
+        console.log('Nuevo operador 1', op1)
+        console.log('Nuevo operador 2', op3)
+        setResultdado(resta(Number(resultado), Number(op3)))
         console.log(resultado)
+        setOp1('')
+        setOp3('')
       }
-    } else if (operacion === '*') {
+    } else if (operacion === '*') {// Apartado de la multiplicación.
       // Este manda a llamar a la operación multiplicación,
       // que se encuentra en la carpeta de operaciones.
       setResultdado(multiplicacion(Number(op1), Number(op2)))
@@ -143,18 +156,24 @@ function App() {
         console.log('Nuevo operador1', op1)
         console.log('Op3', op3)
         setResultdado(suma(Number(resultado), Number(op3)))
+        setOp1('')
+        setOp3('')
       } else if (newOperacion === '*') {
         setOperacion('')
         setOp1(resultado)
         console.log('Nuevo operador1', op1)
         console.log('Op3', op3)
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
+        setOp1('')
+        setOp3('')
       } else if (newOperacion === '-') {
         setOperacion('')
         setOp1(resultado)
         console.log('Nuevo operador1', op1)
         console.log('Op3', op3)
-        setResultdado(resta(Number(op3), Number(resultado)))
+        setResultdado(resta(Number(resultado), Number(op3)))
+        setOp1('')
+        setOp3('')
       }
     }
   }
