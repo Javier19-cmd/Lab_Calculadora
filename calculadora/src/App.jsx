@@ -27,7 +27,7 @@ import multiplicacion from './operaciones/multiplicacion'
 function App() {
   const [op1, setOp1] = useState('') // Estado de los botones de la calculadora. Guarda el primer valor.
   const [op2, setOp2] = useState('') // Estado de los botones de la calculadora. Guarda el segundo valor.
-  const [op3, setOp3] = useState('')
+  const [op3, setOp3] = useState('') // Estadp de los botones de la calculadora. Guarda el tercer valor.
   const [operacion, setOperacion] = useState('') // Estado que guarda las operaciones.
   const [newOperacion, setNewOperacion] = useState('')
   const [resultado, setResultdado] = useState(0) // Estado que guarda los resultados.
@@ -40,7 +40,7 @@ function App() {
     } else if (newOperacion === '') {
       // Esto pasa si ya se seleccionó un operando.
       setOp2(op2 + e) // Setteando el segundo número en la pantalla.
-    } else {
+    } else { // Tercer número que sirve para operar los números.
       setOp3(op3 + e)
     }
   }
@@ -74,15 +74,15 @@ function App() {
       setOp1('')
       setOp3('')
 
-      // Haciendo las operaciones nuevamente,
-      // en caso de que se haya presionado otra vez una tecla de suma, resta o multiplicación.
+      // Haciendo las operaciones nuevamente.
+      // En caso de que se haya presionado otra vez una tecla de suma, resta o multiplicación.
       if (newOperacion === '+') {
         setResultdado(suma(Number(resultado), Number(op3)))
         // setOperacion('')
-        setOp1(resultado)
-        console.log('El anterior resultado es: ', resultado)
-        console.log('Nuevo operador 1', resultado)
-        console.log('Nuevo operador 2', op3)
+        // setOp1(resultado)
+        // console.log('El anterior resultado es: ', resultado)
+        // console.log('Nuevo operador 1', resultado)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
         setNewOperacion('')
@@ -90,9 +90,9 @@ function App() {
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
         // setOperacion('')
         setOp1(resultado)
-        console.log('El nuevo resultado es: ', resultado)
-        console.log('Nuevo operador 1', op1)
-        console.log('Nuevo operador 2', op3)
+        // console.log('El nuevo resultado es: ', resultado)
+        // console.log('Nuevo operador 1', op1)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
         setNewOperacion('')
@@ -100,9 +100,9 @@ function App() {
         setResultdado(resta(Number(resultado), Number(op3)))
         // setOperacion('')
         setOp1(resultado)
-        console.log('El nuevo resultado es: ', resultado)
-        console.log('Nuevo operador 1', op1)
-        console.log('Nuevo operador 2', op3)
+        // console.log('El nuevo resultado es: ', resultado)
+        // console.log('Nuevo operador 1', op1)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
         setNewOperacion('')
@@ -116,38 +116,40 @@ function App() {
       // Haciendo las operaciones nuevamente,
       // en caso de que se haya presionado otra vez una tecla de suma, resta o multiplicación.
 
+      // Haciendo las operaciones nuevamente,
+      // en caso de que se haya presionado otra vez una tecla de suma, resta o multiplicación.
       if (newOperacion === '+') {
-        setOperacion('')
-        setOp1(resultado)
-        console.log('Nuevo operador1', op1)
-        console.log('Op3', op3)
         setResultdado(suma(Number(resultado), Number(op3)))
-        console.log(resultado)
+        // setOperacion('')
+        setOp1(resultado)
+        // console.log('El anterior resultado es: ', resultado)
+        // console.log('Nuevo operador 1', resultado)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
-        //setNewOperacion('')
+        setNewOperacion('')
       } else if (newOperacion === '*') {
-        setOperacion('')
-        setOp1(resultado)
-        console.log('Nuevo operador 1', op1)
-        console.log('Nuevo operador 2', op3)
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
-        console.log(resultado)
-        setOp1('')
-        setOp3('')
-        //setNewOperacion('')
-      }else if (newOperacion === '-') {
-        setOperacion('')
+        // setOperacion('')
         setOp1(resultado)
-        console.log('Nuevo operador 1', op1)
-        console.log('Nuevo operador 2', op3)
-        setResultdado(resta(Number(resultado), Number(op3)))
-        console.log(resultado)
+        // console.log('El nuevo resultado es: ', resultado)
+        // console.log('Nuevo operador 1', op1)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
-        //setNewOperacion('')
+        setNewOperacion('')
+      } else if (newOperacion === '-') {
+        setResultdado(resta(Number(resultado), Number(op3)))
+        // setOperacion('')
+        setOp1(resultado)
+        // console.log('El nuevo resultado es: ', resultado)
+        // console.log('Nuevo operador 1', op1)
+        // console.log('Nuevo operador 2', op3)
+        setOp1('')
+        setOp3('')
+        setNewOperacion('')
       }
-    } else if (operacion === '*') {// Apartado de la multiplicación.
+    } else if (operacion === '*') { // Apartado de la multiplicación.
       // Este manda a llamar a la operación multiplicación,
       // que se encuentra en la carpeta de operaciones.
       setResultdado(multiplicacion(Number(op1), Number(op2)))
@@ -156,32 +158,38 @@ function App() {
       // Haciendo las operaciones nuevamente,
       // en caso de que se haya presionado otra vez una tecla de suma, resta o multiplicación.
 
+      // Haciendo las operaciones nuevamente,
+      // en caso de que se haya presionado otra vez una tecla de suma, resta o multiplicación.
       if (newOperacion === '+') {
-        setOperacion('')
-        setOp1(resultado)
-        console.log('Nuevo operador1', op1)
-        console.log('Op3', op3)
         setResultdado(suma(Number(resultado), Number(op3)))
+        // setOperacion('')
+        setOp1(resultado)
+        // console.log('El anterior resultado es: ', resultado)
+        // console.log('Nuevo operador 1', resultado)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
-        //setNewOperacion('')
+        setNewOperacion('')
       } else if (newOperacion === '*') {
-        setOperacion('')
-        setOp1(resultado)
-        console.log('Nuevo operador1', op1)
-        console.log('Op3', op3)
         setResultdado(multiplicacion(Number(resultado), Number(op3)))
-        setOp1('')
-        setOp3('')
-      } else if (newOperacion === '-') {
-        setOperacion('')
+        // setOperacion('')
         setOp1(resultado)
-        console.log('Nuevo operador1', op1)
-        console.log('Op3', op3)
-        setResultdado(resta(Number(resultado), Number(op3)))
+        // console.log('El nuevo resultado es: ', resultado)
+        // console.log('Nuevo operador 1', op1)
+        // console.log('Nuevo operador 2', op3)
         setOp1('')
         setOp3('')
-       // setNewOperacion('')
+        setNewOperacion('')
+      } else if (newOperacion === '-') {
+        setResultdado(resta(Number(resultado), Number(op3)))
+        // setOperacion('')
+        setOp1(resultado)
+        // console.log('El nuevo resultado es: ', resultado)
+        // console.log('Nuevo operador 1', op1)
+        // console.log('Nuevo operador 2', op3)
+        setOp1('')
+        setOp3('')
+        setNewOperacion('')
       }
     }
   }
