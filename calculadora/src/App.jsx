@@ -18,7 +18,7 @@
 // 3. Arreglando los imports: https://lifesaver.codes/answer/import-extensions-missing-file-extension-after-upgrade-to-v2-19-1-1573
 // Eliminar resultado y settear op1 para el resultado y op2 limpiarlo para el nuevo resultado.
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import suma from './operaciones/suma'
 import resta from './operaciones/resta'
@@ -36,12 +36,24 @@ function App() {
   const numero = (e) => {
     if (operacion === '') {
       // Si no se ha seleccionado una operación, entonces se settea el primer número.
-      setOp1(op1 + e) // Setteando el primer número en la pantalla.
+      const entrada = op1 + e// Variable a analizar.
+      if (entrada.length <= 9) {
+        setOp1(entrada) // Setteando el primer número en la pantalla.
+        // console.log('Longitud válida')
+      }
     } else if (newOperacion === '') {
       // Esto pasa si ya se seleccionó un operando.
-      setOp2(op2 + e) // Setteando el segundo número en la pantalla.
+      const entr = op2 + e // Variable a analizar.
+      if (entr.length <= 9) {
+        setOp2(entr) // Setteando el segundo número en la pantalla.
+        // console.log('Longitud válida')
+      }
     } else { // Tercer número que sirve para operar los números.
-      setOp3(op3 + e)
+      const ent = op3 + e // Variable a analizar.
+      if (ent.length <= 9) {
+        setOp3(ent) // Setteando el segundo número en la pantalla.
+        // console.log('Longitud válida')
+      }
     }
   }
 
