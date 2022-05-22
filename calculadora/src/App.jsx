@@ -23,6 +23,7 @@ import './App.css'
 import suma from './operaciones/suma'
 import resta from './operaciones/resta'
 import multiplicacion from './operaciones/multiplicacion'
+import modulo from './operaciones/modulo'
 
 function App() {
   const [op1, setOp1] = useState('') // Estado de los botones de la calculadora. Guarda el primer valor.
@@ -45,18 +46,6 @@ function App() {
         setOp2(entr) // Setteando el segundo número en la pantalla.
         // console.log('Longitud válida')
       }
-    } 
-  }
-
-  // Esta función guarda la operación que el usuario presionó.
-  const opera = (e) => {
-    if (operacion === '') {
-      setOperacion(e) // Se guarda el operando que se presionó.
-      // Si en caso no se seleccionó una operación, entonces se pone la operación en el estado.
-    } else {
-      // Si en caso ya hay una operación se settea en otro estado la operación actual.
-      results()
-      setOperacion(e) // Setteando la operación a seguir.
     }
   }
 
@@ -65,7 +54,6 @@ function App() {
     setOp1('')
     setOp2('')
     setOperacion('')
-
   }
 
   // Función que lee las operaciones presionadas.
@@ -73,14 +61,11 @@ function App() {
     if (operacion === '+') { // Apartado de la suma.
       // Este manda a llamar a la suma desde el arhivo suma,
       // que se encuentra en la carpeta de operaciones.
-      
       const res = suma(Number(op1), Number(op2))
       // Llenando op1.
       setOp1(res)
       setOp2('')
       setOperacion('')
-
-
     } else if (operacion === '-') { // Apartado de la resta.
       // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
       const res = resta(Number(op1), Number(op2))
@@ -92,11 +77,32 @@ function App() {
       // Este manda a llamar a la operación multiplicación,
       // que se encuentra en la carpeta de operaciones.
       // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
-      const res = resta(Number(op1), Number(op2))
+      const res = multiplicacion(Number(op1), Number(op2))
       // Llenando op1.
       setOp1(res)
       setOp2('')
       setOperacion('')
+    } else if (operacion === '%') { // Apartado de la operación módulo.
+      // Este manda a llamar a la operación modulo,
+      // que se encuentra en la carpeta de operaciones.
+      // Este manda a llamar a la operación resta, que se encuentra en la carpeta de operaciones.
+      const res = modulo(Number(op1), Number(op2))
+      // Llenando op1.
+      setOp1(res)
+      setOp2('')
+      setOperacion('')
+    }
+  }
+
+  // Esta función guarda la operación que el usuario presionó.
+  const opera = (e) => {
+    if (operacion === '') {
+      setOperacion(e) // Se guarda el operando que se presionó.
+      // Si en caso no se seleccionó una operación, entonces se pone la operación en el estado.
+    } else {
+      // Si en caso ya hay una operación se settea en otro estado la operación actual.
+      results()
+      setOperacion(e) // Setteando la operación a seguir.
     }
   }
 
@@ -140,6 +146,8 @@ function App() {
         <button className='Menos' onClick= { () => { opera('-') } } >-</button>
         { /* Botón para la multiplicación */ }
         <button className='Multiplicacion' onClick= { () => { opera('*') } } >x</button>
+        { /* Botón para el módulo */ }
+        <button className='Modulo' onClick= { () => { opera('%') } } >%</button>
         { /* Botón para la igualdad */ }
         <button className='Igual' onClick= { results } >=</button>
         { /* Botón para borrar */ }

@@ -6,14 +6,15 @@ body{
 .Calculadora{
   position: absolute;
   display: flex;
+  left: 77px;
 }
 
 /*Propiedades del botón cero*/
 .Cero{
   position: relative;
-  width: 300px;
+  width: 225px;
   height: 50px;
-  left: 750px;
+  left: 675px;
   top: 600px;
   background: orange;
 }
@@ -141,7 +142,7 @@ body{
   position: relative;
   width: 150px;
   height: 50px;
-  left: -450px;
+  left: -525px;
   top: 400px;
   background: orange;
 }
@@ -151,8 +152,19 @@ body{
   position: relative;
   width: 150px;
   height: 50px;
-  left: -450px;
+  left: -526px;
   top: 400px;
+  background: orange;
+}
+
+
+.Modulo{
+  position: relative;
+  width: 75px;
+  height: 50px;
+  top: 600px;
+  left: -226px;
+  justify-content: center;
   background: orange;
 }
 
